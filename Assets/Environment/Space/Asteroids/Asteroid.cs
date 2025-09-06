@@ -10,7 +10,7 @@ public partial class Asteroid : Sprite2D
     PackedScene SmallRock = GD.Load<PackedScene>("res://Assets/Environment/Space/Materials/small_rock.tscn");
 
     private float _rotationSpeed = 0.1f;
-    private float _speed = 12.5f;
+    private float _speed = 25.5f;
 
     public override void _Process(double delta)
     {

@@ -1,3 +1,4 @@
+using Environment.Space;
 using Godot;
 using Scripts.Components.HealthComponent;
 using Scripts.Components.HitBox;

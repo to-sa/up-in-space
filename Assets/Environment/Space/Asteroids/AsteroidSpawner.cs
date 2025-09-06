@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using Environment.Space;
 
 [GlobalClass]
 public partial class AsteroidSpawner : Path2D
