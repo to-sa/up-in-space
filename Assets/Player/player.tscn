@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://bme23kne0ljf3"]
+
+[ext_resource type="Texture2D" uid="uid://dhyjlx6htxqrx" path="res://Assets/Player/Art/astro-front-view.png" id="1_d6veg"]
+[ext_resource type="Script" uid="uid://dqeyh6r6arnxq" path="res://Assets/Player/Player.cs" id="1_ouxva"]
+[ext_resource type="Script" uid="uid://hs6eq8pn2dgp" path="res://Assets/Player/Pivot.cs" id="3_aqk3a"]
+[ext_resource type="Script" uid="uid://binqvsj7gi3lc" path="res://Scripts/StateMachine/StateMachine.cs" id="3_v2miy"]
+[ext_resource type="Script" uid="uid://bm20hkc30mde1" path="res://Assets/Player/States/InSpace.cs" id="4_ouxva"]
+[ext_resource type="PackedScene" uid="uid://teilc3yxknpv" path="res://Assets/Tools/Pickaxe/pickaxe.tscn" id="5_5j20w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d6veg"]
+radius = 8.0
+height = 22.0
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_ouxva")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+texture = ExtResource("1_d6veg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("CapsuleShape2D_d6veg")
+
+[node name="Pivot" type="Node2D" parent="."]
+position = Vector2(0, -9)
+rotation = -0.0274399
+script = ExtResource("3_aqk3a")
+
+[node name="Pickaxe" parent="Pivot" instance=ExtResource("5_5j20w")]
+unique_name_in_owner = true
+position = Vector2(21.0195, -0.423456)
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("_initialState")]
+script = ExtResource("3_v2miy")
+_initialState = NodePath("InSpace")
+
+[node name="InSpace" type="Node" parent="StateMachine"]
+script = ExtResource("4_ouxva")

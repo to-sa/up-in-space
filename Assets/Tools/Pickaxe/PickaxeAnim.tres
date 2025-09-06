@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://clg02tn46lmkn"]
+
+[ext_resource type="Texture2D" uid="uid://b4mgrip3p3ku0" path="res://Assets/Tools/Pickaxe/PickaxeSheet.png" id="1_b288g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pah85"]
+atlas = ExtResource("1_b288g")
+region = Rect2(0, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7xco"]
+atlas = ExtResource("1_b288g")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fffho"]
+atlas = ExtResource("1_b288g")
+region = Rect2(72, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g68fq"]
+atlas = ExtResource("1_b288g")
+region = Rect2(108, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jyy2"]
+atlas = ExtResource("1_b288g")
+region = Rect2(0, 0, 36, 36)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pah85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7xco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fffho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g68fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jyy2")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq2wqb4hngnc1"]
+
+[ext_resource type="AudioStream" uid="uid://cx1f7oydvp583" path="res://Assets/SFX/Music/staring at sky.wav" id="1_dk38l"]
+[ext_resource type="PackedScene" uid="uid://bme23kne0ljf3" path="res://Assets/Player/player.tscn" id="2_ayjeg"]
+[ext_resource type="PackedScene" uid="uid://cu3tdr2ijivxn" path="res://Assets/Spaceship/spaceship.tscn" id="3_6afkh"]
+[ext_resource type="Script" uid="uid://dvawu60agaf5u" path="res://Assets/Environment/Space/Asteroids/AsteroidSpawner.cs" id="3_dk38l"]
+
+[sub_resource type="Curve2D" id="Curve2D_ayjeg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1161, -404, 0, 0, 0, 0, 1169, 463)
+}
+point_count = 2
+
+[node name="Space" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Background" type="ColorRect" parent="Background"]
+process_mode = 4
+z_index = -5
+offset_left = -2514.0
+offset_top = -1465.0
+offset_right = 2668.0
+offset_bottom = 1880.0
+color = Color(0.0345146, 0.155377, 0.263611, 1)
+
+[node name="BGM" type="AudioStreamPlayer" parent="Background"]
+stream = ExtResource("1_dk38l")
+volume_db = 3.0
+autoplay = true
+
+[node name="Stars" type="CPUParticles2D" parent="Background"]
+amount = 150
+lifetime = 4.0
+speed_scale = 5.0
+lifetime_randomness = 0.51
+emission_shape = 3
+emission_rect_extents = Vector2(500, 500)
+gravity = Vector2(0, 0)
+scale_amount_max = 3.0
+color = Color(0.605172, 0.530559, 0.291818, 1)
+
+[node name="AstroidSpawner" type="Path2D" parent="."]
+position = Vector2(-601, -11)
+curve = SubResource("Curve2D_ayjeg")
+script = ExtResource("3_dk38l")
+_asteroidSpawnRate = 20.0
+_spawnSwitch = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="AstroidSpawner"]
+position = Vector2(1161, -404)
+rotation = 1.56157
+
+[node name="Spaceship" parent="." instance=ExtResource("3_6afkh")]
+position = Vector2(-244, -248)
+scale = Vector2(4, 4)
+
+[node name="Player" parent="." instance=ExtResource("2_ayjeg")]
+process_mode = 3
+z_index = 10
+
+[node name="MainCamera" type="Camera2D" parent="Player"]
+zoom = Vector2(1.2, 1.2)
+limit_left = -500
+limit_top = -450
+limit_right = 500
+limit_bottom = 500
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

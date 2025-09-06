@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4efciu1e7ro4"]
+
+[ext_resource type="Texture2D" uid="uid://dmdoku8hwn1rj" path="res://Assets/Environment/Space/Asteroids/asteroids.png" id="1_10jsb"]
+[ext_resource type="Script" uid="uid://b2mhrjl5v3skx" path="res://Assets/Environment/Space/Asteroids/Asteroid.cs" id="2_40p1d"]
+[ext_resource type="PackedScene" uid="uid://oafycwbqb4tm" path="res://Scripts/Components/HealthComponent/HealthComponent.tscn" id="3_n4jov"]
+[ext_resource type="PackedScene" uid="uid://uoepjok30edp" path="res://Scripts/Components/HurtBox/HurtBox.tscn" id="3_nogc8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nogc8"]
+radius = 7.78621
+
+[node name="Asteroid" type="Sprite2D"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_10jsb")
+script = ExtResource("2_40p1d")
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_n4jov")]
+Health = 30.0
+
+[node name="HurtBox" parent="." node_paths=PackedStringArray("HealthComponent") instance=ExtResource("3_nogc8")]
+position = Vector2(0.25, -0.5)
+HealthComponent = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_nogc8")

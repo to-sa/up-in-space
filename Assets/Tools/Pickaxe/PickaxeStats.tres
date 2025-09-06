@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ToolResource" load_steps=2 format=3 uid="uid://bhbcb78ummdhh"]
+
+[ext_resource type="Script" uid="uid://cy70hjdb6mjso" path="res://Scripts/Resources/ToolResource.cs" id="2_jcalp"]
+
+[resource]
+script = ExtResource("2_jcalp")
+Attack = 1.0
+metadata/_custom_type_script = "uid://cy70hjdb6mjso"

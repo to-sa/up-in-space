@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cx1f7oydvp583"
+path="res://.godot/imported/staring at sky.wav-7a8e17b7a06d35d4065873fcfdbf26fa.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Music/staring at sky.wav"
+dest_files=["res://.godot/imported/staring at sky.wav-7a8e17b7a06d35d4065873fcfdbf26fa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://teilc3yxknpv"]
+
+[ext_resource type="Script" uid="uid://dgn1tkoxunygk" path="res://Assets/Tools/Pickaxe/Pickaxe.cs" id="1_1ahyi"]
+[ext_resource type="Script" uid="uid://badspthwkj6p2" path="res://Scripts/Components/HitBox/HitBox.cs" id="2_6mugt"]
+[ext_resource type="SpriteFrames" uid="uid://clg02tn46lmkn" path="res://Assets/Tools/Pickaxe/PickaxeAnim.tres" id="2_pah85"]
+[ext_resource type="Resource" uid="uid://bhbcb78ummdhh" path="res://Assets/Tools/Pickaxe/PickaxeStats.tres" id="4_pah85"]
+[ext_resource type="AudioStream" uid="uid://cyqrbnjlnxv2j" path="res://Assets/Tools/Pickaxe/MineSound.wav" id="5_x7xco"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6mugt"]
+
+[node name="Pickaxe" type="Node2D"]
+script = ExtResource("1_1ahyi")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = ExtResource("2_pah85")
+animation = &"attack"
+offset = Vector2(6, 1)
+
+[node name="HitBox" type="Area2D" parent="."]
+script = ExtResource("2_6mugt")
+ToolStats = ExtResource("4_pah85")
+metadata/_custom_type_script = "uid://badspthwkj6p2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(15, -10)
+shape = SubResource("CircleShape2D_6mugt")
+disabled = true
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_x7xco")

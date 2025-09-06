@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://lv5tufy8n1vg"]
+
+[ext_resource type="Script" uid="uid://n0rni5dlkj7d" path="res://Assets/Tools/Toolbase.cs" id="1_f6cgb"]
+[ext_resource type="Script" uid="uid://badspthwkj6p2" path="res://Scripts/Components/HitBox/HitBox.cs" id="2_4du58"]
+
+[node name="ToolBase" type="Node2D"]
+script = ExtResource("1_f6cgb")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+animation = &""
+offset = Vector2(6, 1)
+
+[node name="HitBox" type="Area2D" parent="."]
+script = ExtResource("2_4du58")
+metadata/_custom_type_script = "uid://badspthwkj6p2"
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
