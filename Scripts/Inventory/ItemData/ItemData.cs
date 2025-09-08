@@ -1,13 +1,16 @@
 using Godot;
 using System;
 
+namespace Inventory.Data;
 [GlobalClass]
 public partial class ItemData : Resource
 {
-    [Export] private String name;
+    [Export] public String Name;
 
-    [Export] private AtlasTexture texture;
+    [Export] public Texture2D Texture;
+
+    [Export] public bool Stackable;
 
     [Export(PropertyHint.MultilineText)]
-    private String ToolDir { get; set; }
+    public String ItemDescription { get; set; }
 }

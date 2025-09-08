@@ -1,5 +1,6 @@
 using Assets.Tools;
 using Godot;
+using Signals;
 using System;
 
 namespace Assets.Player;
@@ -21,6 +22,14 @@ public partial class Player : CharacterBody2D
         if (Pickaxe == null)
         {
             GD.PushError("Missing tool");
+        }
+    }
+
+    public override void _UnhandledInput(InputEvent @event)
+    {
+        if (@event.IsActionPressed("inventory"))
+        {
+            SignalBus.Instance.EmitSignal("ToggledInventory");
         }
     }
 
@@ -62,7 +71,5 @@ public partial class Player : CharacterBody2D
 
         GlobalPosition = globalPosition;
     }
-
-
 
 }

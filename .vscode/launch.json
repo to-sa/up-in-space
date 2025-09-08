@@ -6,7 +6,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "/home/sandre/Documents/dev/godot/gd-engine/Godot_v4.4.1-stable_mono_linux.x86_64",
+      "program": "C:/Users/sandre/Documents/Development/Godot/Engine/Godot_v4.4.1-stable_mono_win64.exe",
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,

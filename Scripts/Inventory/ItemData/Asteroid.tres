@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_0kpbm")
-name = ""
-ToolDir = ""
+Name = ""
+Stackable = true
+ItemDescription = ""
 metadata/_custom_type_script = "uid://d1bcst5bw77xn"

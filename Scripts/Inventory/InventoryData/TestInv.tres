@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=11 format=3 uid="uid://coltq2c7pv6ce"]
+
+[ext_resource type="Script" uid="uid://06l3v03x0yr1" path="res://Scripts/Inventory/SlotData/SlotData.cs" id="1_sx8t5"]
+[ext_resource type="Script" uid="uid://but23f4sxmr0" path="res://Scripts/Inventory/InventoryData/InventoryData.cs" id="1_usgis"]
+
+[sub_resource type="Resource" id="Resource_0wo64"]
+script = ExtResource("1_sx8t5")
+Quantity = 1
+metadata/_custom_type_script = "uid://06l3v03x0yr1"
+
+[sub_resource type="Resource" id="Resource_3fm5s"]
+script = ExtResource("1_sx8t5")
+Quantity = 1
+metadata/_custom_type_script = "uid://06l3v03x0yr1"
+
+[sub_resource type="Resource" id="Resource_i7c72"]
+script = ExtResource("1_sx8t5")
+Quantity = 1
+metadata/_custom_type_script = "uid://06l3v03x0yr1"
+
+[sub_resource type="Resource" id="Resource_0f0in"]
+script = ExtResource("1_sx8t5")
+Quantity = 1
+metadata/_custom_type_script = "uid://06l3v03x0yr1"
+
+[sub_resource type="Resource" id="Resource_qjedv"]
+script = ExtResource("1_sx8t5")
+Quantity = 1
+metadata/_custom_type_script = "uid://06l3v03x0yr1"
+
+[sub_resource type="Resource" id="Resource_to1qr"]
+script = ExtResource("1_sx8t5")
+Quantity = 1
+metadata/_custom_type_script = "uid://06l3v03x0yr1"
+
+[sub_resource type="Resource" id="Resource_sx8t5"]
+script = ExtResource("1_sx8t5")
+Quantity = 1
+metadata/_custom_type_script = "uid://06l3v03x0yr1"
+
+[sub_resource type="Resource" id="Resource_uslys"]
+script = ExtResource("1_sx8t5")
+Quantity = 1
+metadata/_custom_type_script = "uid://06l3v03x0yr1"
+
+[resource]
+script = ExtResource("1_usgis")
+SlotDatas = Array[Object]([SubResource("Resource_0wo64"), SubResource("Resource_3fm5s"), SubResource("Resource_i7c72"), SubResource("Resource_0f0in"), SubResource("Resource_qjedv"), SubResource("Resource_to1qr"), SubResource("Resource_sx8t5"), SubResource("Resource_uslys")])
+metadata/_custom_type_script = "uid://but23f4sxmr0"

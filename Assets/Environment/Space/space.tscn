@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cq2wqb4hngnc1"]
+[gd_scene load_steps=9 format=3 uid="uid://cq2wqb4hngnc1"]
 
+[ext_resource type="Script" uid="uid://bxuad8qnrs4wq" path="res://Assets/Environment/Space/Space.cs" id="1_3w2af"]
 [ext_resource type="AudioStream" uid="uid://cx1f7oydvp583" path="res://Assets/SFX/Music/staring at sky.wav" id="1_dk38l"]
 [ext_resource type="PackedScene" uid="uid://bme23kne0ljf3" path="res://Assets/Player/player.tscn" id="2_ayjeg"]
 [ext_resource type="PackedScene" uid="uid://cu3tdr2ijivxn" path="res://Assets/Spaceship/spaceship.tscn" id="3_6afkh"]
 [ext_resource type="Script" uid="uid://dvawu60agaf5u" path="res://Assets/Environment/Space/Asteroids/AsteroidSpawner.cs" id="3_dk38l"]
+[ext_resource type="PackedScene" uid="uid://cmb18k7x11nr2" path="res://Scripts/Inventory/InventoryData/Inventory.tscn" id="5_acwi1"]
+[ext_resource type="Script" uid="uid://ccg3cmhctht6x" path="res://Scripts/Inventory/InventoryData/InventoryInterface.cs" id="6_lr47v"]
 
 [sub_resource type="Curve2D" id="Curve2D_ayjeg"]
 _data = {
@@ -12,6 +15,7 @@ _data = {
 point_count = 2
 
 [node name="Space" type="Node2D"]
+script = ExtResource("1_3w2af")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -53,7 +57,7 @@ rotation = 1.56157
 
 [node name="Spaceship" parent="." instance=ExtResource("3_6afkh")]
 position = Vector2(-244, -248)
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("2_ayjeg")]
 process_mode = 3
@@ -67,3 +71,23 @@ limit_right = 500
 limit_bottom = 500
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InventoryInterface" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("6_lr47v")
+
+[node name="Inventory" parent="UI/InventoryInterface" instance=ExtResource("5_acwi1")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 44.0
+offset_bottom = 44.0
+mouse_filter = 1
