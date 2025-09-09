@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cq2wqb4hngnc1"]
+[gd_scene load_steps=10 format=3 uid="uid://cq2wqb4hngnc1"]
 
 [ext_resource type="Script" uid="uid://bxuad8qnrs4wq" path="res://Assets/Environment/Space/Space.cs" id="1_3w2af"]
 [ext_resource type="AudioStream" uid="uid://cx1f7oydvp583" path="res://Assets/SFX/Music/staring at sky.wav" id="1_dk38l"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dvawu60agaf5u" path="res://Assets/Environment/Space/Asteroids/AsteroidSpawner.cs" id="3_dk38l"]
 [ext_resource type="PackedScene" uid="uid://cmb18k7x11nr2" path="res://Scripts/Inventory/InventoryData/Inventory.tscn" id="5_acwi1"]
 [ext_resource type="Script" uid="uid://ccg3cmhctht6x" path="res://Scripts/Inventory/InventoryData/InventoryInterface.cs" id="6_lr47v"]
+[ext_resource type="PackedScene" uid="uid://b0bi5l72cn40l" path="res://Scripts/Inventory/SlotData/Slot.tscn" id="8_ayqya"]
 
 [sub_resource type="Curve2D" id="Curve2D_ayjeg"]
 _data = {
@@ -31,7 +32,6 @@ color = Color(0.0345146, 0.155377, 0.263611, 1)
 [node name="BGM" type="AudioStreamPlayer" parent="Background"]
 stream = ExtResource("1_dk38l")
 volume_db = 3.0
-autoplay = true
 
 [node name="Stars" type="CPUParticles2D" parent="Background"]
 amount = 150
@@ -91,3 +91,10 @@ offset_top = 10.0
 offset_right = 44.0
 offset_bottom = 44.0
 mouse_filter = 1
+
+[node name="GrabbedSlot" parent="UI/InventoryInterface" instance=ExtResource("8_ayqya")]
+modulate = Color(1, 1, 1, 0.513726)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 48.0

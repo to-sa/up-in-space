@@ -1,16 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkq8l73rip6a2"]
+[gd_scene load_steps=7 format=3 uid="uid://dkq8l73rip6a2"]
 
 [ext_resource type="Script" uid="uid://bw0vy2i2i0qul" path="res://Scripts/Inventory/GlobalInventory.cs" id="1_0o7d2"]
-[ext_resource type="Resource" uid="uid://i0wsdle5y74u" path="res://Scripts/Inventory/ItemData/FuelTank.tres" id="2_65rtj"]
 [ext_resource type="Script" uid="uid://06l3v03x0yr1" path="res://Scripts/Inventory/SlotData/SlotData.cs" id="3_ftjp0"]
 [ext_resource type="Script" uid="uid://but23f4sxmr0" path="res://Scripts/Inventory/InventoryData/InventoryData.cs" id="4_7lmxh"]
 [ext_resource type="Resource" uid="uid://x3xd84ser117" path="res://Scripts/Inventory/ItemData/Ore.tres" id="4_ftjp0"]
-
-[sub_resource type="Resource" id="Resource_65rtj"]
-script = ExtResource("3_ftjp0")
-ItemData = ExtResource("2_65rtj")
-Quantity = 1
-metadata/_custom_type_script = "uid://06l3v03x0yr1"
 
 [sub_resource type="Resource" id="Resource_7lmxh"]
 script = ExtResource("3_ftjp0")
@@ -20,7 +13,7 @@ metadata/_custom_type_script = "uid://06l3v03x0yr1"
 
 [sub_resource type="Resource" id="Resource_ftjp0"]
 script = ExtResource("4_7lmxh")
-SlotDatas = Array[Object]([SubResource("Resource_65rtj"), SubResource("Resource_7lmxh"), null, null, null, null, null, null])
+SlotDatas = Array[Object]([SubResource("Resource_7lmxh"), null, null, null])
 metadata/_custom_type_script = "uid://but23f4sxmr0"
 
 [node name="GlobalInventory" type="Node"]

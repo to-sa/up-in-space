@@ -32,6 +32,10 @@ public partial class Slot : PanelContainer
             _quantityLabel.Show();
             _quantityLabel.Text = slotData.Quantity.ToString();
         }
+        else
+        {
+            _quantityLabel.Hide();
+        }
     }
 
     private void OnGuiInput(InputEvent @event)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bme23kne0ljf3"]
 
-[ext_resource type="Texture2D" uid="uid://dhyjlx6htxqrx" path="res://Assets/Player/Art/astro-front-view.png" id="1_d6veg"]
 [ext_resource type="Script" uid="uid://dqeyh6r6arnxq" path="res://Assets/Player/Player.cs" id="1_ouxva"]
+[ext_resource type="Texture2D" uid="uid://dhksp680r0ocs" path="res://Assets/Player/Art/AstroFront.png" id="2_aqk3a"]
 [ext_resource type="Script" uid="uid://hs6eq8pn2dgp" path="res://Assets/Player/Pivot.cs" id="3_aqk3a"]
 [ext_resource type="Script" uid="uid://binqvsj7gi3lc" path="res://Scripts/StateMachine/StateMachine.cs" id="3_v2miy"]
 [ext_resource type="Script" uid="uid://bm20hkc30mde1" path="res://Assets/Player/States/InSpace.cs" id="4_ouxva"]
@@ -17,7 +17,7 @@ script = ExtResource("1_ouxva")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -10)
-texture = ExtResource("1_d6veg")
+texture = ExtResource("2_aqk3a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)

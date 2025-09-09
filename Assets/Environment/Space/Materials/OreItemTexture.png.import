@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhyjlx6htxqrx"
-path="res://.godot/imported/astro-front-view.png-356e7860edd31da7544ade14382facae.ctex"
+uid="uid://bnewojbtslex1"
+path="res://.godot/imported/OreItemTexture.png-60d86a1716a44d0ebd9f2b2d67f603b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Art/astro-front-view.png"
-dest_files=["res://.godot/imported/astro-front-view.png-356e7860edd31da7544ade14382facae.ctex"]
+source_file="res://Assets/Environment/Space/Materials/OreItemTexture.png"
+dest_files=["res://.godot/imported/OreItemTexture.png-60d86a1716a44d0ebd9f2b2d67f603b2.ctex"]
 
 [params]
 

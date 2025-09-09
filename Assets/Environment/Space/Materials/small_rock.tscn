@@ -1,23 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://deypk5katwq3m"]
 
-[ext_resource type="Texture2D" uid="uid://dmdoku8hwn1rj" path="res://Assets/Environment/Space/Asteroids/asteroids.png" id="1_pg04h"]
 [ext_resource type="Script" uid="uid://cq8hh56lcn77e" path="res://Assets/Environment/Space/Materials/SmallRock.cs" id="1_wlrbj"]
+[ext_resource type="Texture2D" uid="uid://tynoh3dqle8k" path="res://Assets/Environment/Space/Materials/Ore.png" id="2_kiyil"]
 [ext_resource type="AudioStream" uid="uid://dil8o4p2ti5x0" path="res://Assets/Environment/Space/Materials/pickupCoin.wav" id="3_kiyil"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pg04h"]
-radius = 7.0
+radius = 8.0
 
 [node name="SmallRock" type="Area2D"]
 script = ExtResource("1_wlrbj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0.351563, 0.351563, 0.351563, 1)
-texture = ExtResource("1_pg04h")
+texture = ExtResource("2_kiyil")
 flip_h = true
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_pg04h")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

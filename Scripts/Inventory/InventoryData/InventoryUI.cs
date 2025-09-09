@@ -20,7 +20,14 @@ public partial class InventoryUI : PanelContainer
         _itemGrid = GetNode<GridContainer>("%ItemGrid");
         _itemGrid.Columns = MaxInventoryColumns;
 
-        PopulateInventoryGrid(GlobalInventory.Instance.Inventory);
+        SetInventoryData(GlobalInventory.Instance.Inventory);
+
+    }
+
+    public void SetInventoryData(InventoryData inventory)
+    {
+        inventory.InventoryUpdated += PopulateInventoryGrid;
+        PopulateInventoryGrid(inventory);
     }
 
     private void PopulateInventoryGrid(InventoryData inventory)

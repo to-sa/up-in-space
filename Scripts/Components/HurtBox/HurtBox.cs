@@ -8,7 +8,7 @@ using System;
 public partial class HurtBox : Area2D
 {
 	[Export] private HealthComponent HealthComponent { get; set; }
-	private Asteroid _parent;
+	private Node2D _parent;
 
 	public override void _Ready()
 	{
@@ -34,8 +34,9 @@ public partial class HurtBox : Area2D
 
 		if (_parent is Asteroid && hitBox.Tool == HitBox.ToolType.Pickaxe)
 		{
+			var _parentAsteroid = (Asteroid)_parent;
+			_parent.CallDeferred(nameof(_parentAsteroid.SpawnSmallRocks));
 			HealthComponent.TakeDamage(hitBox.ToolStats.Attack);
-			_parent.CallDeferred(nameof(_parent.SpawnSmallRocks));
 		}
 
 	}
